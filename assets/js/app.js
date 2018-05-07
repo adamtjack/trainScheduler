@@ -59,7 +59,7 @@ $("#addTrainBtn").on("click", function() {
     }
 
     
-    var firstTrainConverted = moment(firstTrain, "hh:mm").subtract("1, years");
+    var firstTrainConverted = moment(firstTrain, "hh:mm").subtract("1, day");
     
     var difference = currentTime.diff(moment(firstTrainConverted), "minutes");
     var remainder = difference % frequency;
@@ -83,5 +83,5 @@ $("#addTrainBtn").on("click", function() {
     $("#firstInput").val("");
     $("#frequencyInput").val("");
 
-    return false;
+    //return false;
 });
